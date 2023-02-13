@@ -2,11 +2,11 @@ body {
 
   font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
   width: 100vw;
-  height: 100vh;
   background-image: url("../images/drone-home-page.jpg");
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-
+  background-color: #6D7D7C;
 
 }
 
@@ -17,7 +17,9 @@ body {
 a {
   color: #000000;
 }
-
+h2{
+  font-size: 2rem;
+}
 
 
 .homePageContainer {
@@ -43,11 +45,12 @@ a {
 
 .buttonContainerHome a {
   padding: 1rem 2rem;
-  border: .5px solid #FB0149;
+  border: .5px solid #ff6464;
   border-radius: 1rem;
-  color: #f36363;
+  color: #ff9c9c;
   text-decoration: none;
   background-color: #4848489e;
+  cursor: pointer;
 }
 
 .buttonContainerHome a:hover {
@@ -60,14 +63,16 @@ a {
 
   background-color: #f5f5f55a;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
   align-content: center;
   justify-content: center;
   gap: 2rem;
-  /* padding: 5rem; */
+  padding-top: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   height: 100%;
-  width: 100%;
+  
  
   
 }
@@ -81,6 +86,7 @@ a {
   height: 13rem;
   border: .5px solid rgba(175, 175, 175, 0.24);
   display: flex;
+
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -98,16 +104,25 @@ a {
   background-color: #60dd9c;
   border: none;
   color: #fff;
-  border-radius: 1rem;
+  border-radius: .6rem;
+  cursor: pointer;
 }
 #deleteButton{
   padding: .8rem 1.3rem;
   background-color: #f36363;
   border: none;
   color: #fff;
-  border-radius: 1rem;
+  border-radius: .6rem;
+  cursor: pointer;
 }
 
+
+#deleteButton:hover{
+  background-color: #d94b4b;
+}
+#updateButton:hover{
+  background-color: #4fb882;
+}
 
 .containerButtonList{
   position: absolute;
@@ -120,9 +135,61 @@ a {
 }
 .containerButtonList a{
   padding: 1rem 2rem;
-  border: .5px solid #FB0149;
+  border: .5px solid #ff6464;
   border-radius: 1rem;
-  color: #f36363;
+  color: #ff9c9c;
   text-decoration: none;
   background-color: #4848489e;
+  cursor: pointer;
+}
+
+.containerButtonList a:hover {
+
+  background-color: #6b6b6b9e;
+
+}
+
+.containerCreateUpdate{
+
+width: 100%;
+height: 100vh;
+background-color: #f5f5f526;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 2rem;
+
+}
+
+.formContainer{
+
+background-color: #ffffff9c;
+padding: 2.5rem 4.5rem;
+border-radius: 1rem;
+
+
+}
+.formDisplay{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center
+}
+.formDisplay button{
+
+background-color: #f36363;
+border:none;
+padding: .5rem 1rem;
+border-radius: 10px;
+color: #fff;
+
+}
+
+input[type=text]:focus {
+  background-color: rgb(255, 204, 204);
+
+}
+input[type=number]:focus {
+  background-color: rgb(255, 204, 204);
 }

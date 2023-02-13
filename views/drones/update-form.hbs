@@ -1,7 +1,18 @@
+<div class="containerCreateUpdate">
+
+
+  <div class="containerButtonList">
+
+    <a href="/">Home Page</a>
+    <a href="/drones/create">Drones Create</a>
+
+  </div>
+
+
 <h2>Update the drone</h2>
+<div class="formContainer">
 
-
-<form action="/drones/{{allDrones._id}}/edit" method="post">
+<form action="/drones/{{allDrones._id}}/edit" method="post" class="formDisplay">
 
 <label for="name">Name</label>
 <input type="text" name="name" value="{{allDrones.name}}">
@@ -14,3 +25,5 @@
 
 <button>Update Drone</button>
 </form>
+</div>
+</div>
