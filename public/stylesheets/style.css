@@ -1,8 +1,128 @@
 body {
-  padding: 50px;
+
   font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../images/drone-home-page.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+
+}
+
+* {
+  margin: 0;
 }
 
 a {
-  color: #00b7ff;
+  color: #000000;
+}
+
+
+
+.homePageContainer {
+
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../images/drone-home-page.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+
+
+}
+
+.buttonContainerHome {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem
+}
+
+.buttonContainerHome a {
+  padding: 1rem 2rem;
+  border: .5px solid #FB0149;
+  border-radius: 1rem;
+  color: #f36363;
+  text-decoration: none;
+  background-color: #4848489e;
+}
+
+.buttonContainerHome a:hover {
+
+  background-color: #6b6b6b9e;
+
+}
+
+.listContainer {
+
+  background-color: #f5f5f55a;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  gap: 2rem;
+  /* padding: 5rem; */
+  height: 100%;
+  width: 100%;
+ 
+  
+}
+
+.containerList {
+
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 13rem;
+  height: 13rem;
+  border: .5px solid rgba(175, 175, 175, 0.24);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+}
+
+.ulContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#updateButton{
+  padding: .8rem 1.3rem;
+  background-color: #60dd9c;
+  border: none;
+  color: #fff;
+  border-radius: 1rem;
+}
+#deleteButton{
+  padding: .8rem 1.3rem;
+  background-color: #f36363;
+  border: none;
+  color: #fff;
+  border-radius: 1rem;
+}
+
+
+.containerButtonList{
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  top: 50px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.containerButtonList a{
+  padding: 1rem 2rem;
+  border: .5px solid #FB0149;
+  border-radius: 1rem;
+  color: #f36363;
+  text-decoration: none;
+  background-color: #4848489e;
 }

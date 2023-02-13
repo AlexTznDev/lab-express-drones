@@ -42,64 +42,61 @@ router.post("/drones/create", async (req, res, next) => {
   //     next(error);
   //   });
 
-  try{
-  const response = await DroneModel.create({
-    name: req.body.name,
-    propellers: req.body.propellers,
-    maxSpeed: req.body.maxSpeed
-  });
+  try {
+    const response = await DroneModel.create({
+      name: req.body.name,
+      propellers: req.body.propellers,
+      maxSpeed: req.body.maxSpeed,
+    });
 
-  res.redirect("/drones")
-
-  }
-  catch(error){
-    next(error)
+    res.redirect("/drones");
+  } catch (error) {
+    next(error);
   }
 });
 
 router.get("/drones/:id/edit", (req, res, next) => {
-  const { id } = req.params
+  const { id } = req.params;
   DroneModel.findById(id)
-  .then((response) => {
-
-    res.render("drones/update-form.hbs", {
-      allDrones: response
+    .then((response) => {
+      res.render("drones/update-form.hbs", {
+        allDrones: response,
+      });
     })
-
-  })
-  .catch((error) => {
-    next(error)
-  })
-  
-
+    .catch((error) => {
+      next(error);
+    });
 });
 
 router.post("/drones/:id/edit", (req, res, next) => {
+  const { id } = req.params;
 
-  const { id } = req.params
-
-  DroneModel.findByIdAndUpdate(id,{
+  DroneModel.findByIdAndUpdate(id, {
     name: req.body.name,
     propellers: req.body.propellers,
-    maxSpeed: req.body.maxSpeed
-
+    maxSpeed: req.body.maxSpeed,
   })
-  .then((response) => {
+    .then((response) => {
+      res.redirect("/drones");
+    })
 
-    res.redirect("/drones")
-  })
-
-
-  .catch((error)=> {
-    next(error)
-  })
-
-  
+    .catch((error) => {
+      next(error);
+    });
 });
 
 router.post("/drones/:id/delete", (req, res, next) => {
-  // Iteration #5: Delete the drone
-  // ... your code here
+  const { id } = req.params;
+
+  DroneModel.findByIdAndDelete(id)
+.then((response)=>{
+res.redirect('/drones')
+})
+.catch((error)=>{
+next(error)
+})
+
+
 });
 
 module.exports = router;
